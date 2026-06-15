@@ -1,0 +1,347 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Portfolio of Jett Schreiber, graphics engineer working on real-time rendering, shaders, and GPU programming." />
+  <title>Jett Schreiber :: Graphics Engineer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500;600&family=VT323&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="bg-grid" aria-hidden="true"></div>
+
+  <!-- Icon sprite: each icon defined once, referenced below with <use>. -->
+  <svg class="sprite" aria-hidden="true">
+    <symbol id="i-github" viewBox="0 0 24 24" fill="currentColor">
+      <path d="M12 .5C5.65.5.5 5.65.5 12c0 5.08 3.29 9.39 7.86 10.91.58.11.79-.25.79-.56v-2c-3.2.7-3.88-1.36-3.88-1.36-.52-1.33-1.27-1.68-1.27-1.68-1.04-.71.08-.7.08-.7 1.15.08 1.76 1.18 1.76 1.18 1.02 1.76 2.69 1.25 3.34.96.1-.75.4-1.25.73-1.54-2.55-.29-5.24-1.28-5.24-5.7 0-1.26.45-2.29 1.18-3.1-.12-.29-.51-1.47.11-3.06 0 0 .97-.31 3.18 1.18.92-.26 1.91-.39 2.9-.39s1.98.13 2.9.39c2.21-1.49 3.18-1.18 3.18-1.18.62 1.59.23 2.77.11 3.06.74.81 1.18 1.84 1.18 3.1 0 4.43-2.7 5.4-5.26 5.69.41.36.78 1.06.78 2.14v3.17c0 .31.21.67.79.56C20.21 21.39 23.5 17.08 23.5 12 23.5 5.65 18.35.5 12 .5z"/>
+    </symbol>
+    <symbol id="i-external" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"/>
+      <polyline points="15 3 21 3 21 9"/>
+      <line x1="10" y1="14" x2="21" y2="3"/>
+    </symbol>
+  </svg>
+
+  <header class="nav">
+    <a href="#top" class="nav__brand">
+      <span class="nav__prompt">Jett-Schreiber@desktop:</span>
+      <span class="nav__name">~/projects/portfolio</span>
+      $
+      <span class="nav__cursor">_</span>
+    </a>
+    <nav class="nav__links" aria-label="Primary">
+      <a href="#about">about</a>
+      <a href="#projects">projects</a>
+      <a href="#education">education</a>
+      <a href="#experience">experience</a>
+      <a href="#hobbies">hobbies</a>
+      <a href="#contact">contact</a>
+    </nav>
+    <button class="nav__toggle" aria-label="Open menu" aria-expanded="false">
+      <span></span><span></span><span></span>
+    </button>
+  </header>
+
+  <main id="top">
+    <section class="hero">
+      <h1 class="hero__title">
+        Hello World,<br />
+        I'm <span class="accent">Jett Schreiber</span>.<br />
+        I turn <span class="accent">math into pixels</span>.
+      </h1>
+      <p class="hero__lede">
+        I am an aspiring Graphics engineer working at the intersection of GPUs, rendering, and
+        real-time simulation. I write shaders, build renderers, and care about
+        the frame budget. Currently looking for my next role.
+      </p>
+      <div class="hero__cta">
+        <a href="#projects" class="btn btn--primary">view projects</a>
+        <a href="#contact" class="btn btn--ghost">get in touch</a>
+      </div>
+      <div class="hero__meta">
+        <code>~/portfolio</code>
+        <span class="sep">·</span>
+        <code>last updated <time datetime="2026-06-14">jun 2026</time></code>
+      </div>
+    </section>
+
+    <section id="about" class="section">
+      <header class="section__header">
+        <span class="section__num">01</span>
+        <h2 class="section__title">about</h2>
+      </header>
+      <div class="about">
+        <div class="about__body">
+          <p>
+            Most of my work lives somewhere on the path from a math problem to a
+            pixel. This can include things like shaders, rendering pipelines, GPU compute, and the geometry
+            and lighting that drive them. My work has largely been in the real-time pipeline, 
+            but I'm always willing to dive into an asynchronous application. 
+          </p>
+          <p>
+            Outside of work, I read SIGGRAPH papers, build modeling tools, 
+            and experiment with new graphics tech.
+          </p>
+        </div>
+        <aside class="about__stack" aria-label="Tech stack">
+          <h3 class="about__stack-title">stack</h3>
+          <ul>
+            <li><span class="tag">languages</span> C++ · JS · Python</li>
+            <li><span class="tag">shaders</span> GLSL · GDShader</li>
+            <li><span class="tag">apis</span> OpenGL</li>
+            <li><span class="tag">tools</span> Blender · git · Rokoko</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section class="section section--console" aria-label="Astro travel">
+      <div class="console" role="img" aria-label="ASCII starfield animation simulating space travel">
+        <div class="console__bar">
+          <span class="console__title">warp_drive.sh :: engaged</span>
+          <span class="console__meta">★ NAV/HYPER</span>
+          <span class="console__controls" aria-hidden="true">
+            <span class="console__btn">&#9472;</span>
+            <span class="console__btn">&#9633;</span>
+            <span class="console__btn console__btn--close" data-tip="but its pretty :(">&#10005;</span>
+          </span>
+        </div>
+        <pre id="starfield" class="console__screen" aria-hidden="true"
+             data-idle="warp drive idle: reduced motion preference detected"></pre>
+      </div>
+    </section>
+
+    <section id="projects" class="section">
+      <header class="section__header">
+        <span class="section__num">02</span>
+        <h2 class="section__title">projects</h2>
+      </header>
+      <ul class="projects">
+        <li class="project">
+          <div class="project__head">
+            <h3 class="project__title">tarantula-animation-controller</h3>
+            <div class="project__links">
+              <a href="https://github.com/Cthulhu5227/tarantula_animation_controller" aria-label="GitHub repo"><svg class="icon"><use href="#i-github" /></svg></a>
+            </div>
+          </div>
+          <p class="project__desc">
+            A multi-agent reinforcement-learning controller for tarantula
+            locomotion in the Unity game engine. Each of the eight legs is an independent
+            <bold> ML-Agents </bold> agent that has to coordinate with the others to produce a
+            stable, efficient stride. 
+          </p>
+          <ul class="project__tags">
+            <li>Unity</li>
+            <li>ML-Agents</li>
+            <li>C#</li>
+            <li>Reinforcement Learning</li>
+          </ul>
+        </li>
+
+        <li class="project">
+          <img class="project__media" src="pics/harmonic.png" alt="Harmonic-coordinate cage deformation of a 3D mesh in PyVista, with red draggable cage control points." loading="lazy" />
+          <div class="project__head">
+            <h3 class="project__title">harmonic-cage</h3>
+            <div class="project__links">
+              <a href="https://github.com/Cthulhu5227/harmonic-cage" aria-label="GitHub repo"><svg class="icon"><use href="#i-github" /></svg></a>
+            </div>
+          </div>
+          <p class="project__desc">
+            An implementation of Joshi et al.'s "Harmonic Coordinates for
+            Character Articulation" (SIGGRAPH 2007). A cage is built around a
+            mesh and harmonic weights are precomputed once with libigl, so
+            dragging the cage's control points deforms the mesh smoothly in
+            real time. Includes an interactive PyVista viewer with view/drag
+            modes and full camera controls.
+          </p>
+          <ul class="project__tags">
+            <li>Python</li>
+            <li>libigl</li>
+            <li>PyVista</li>
+            <li>Geometry Processing</li>
+          </ul>
+        </li>
+
+        <li class="project">
+          <img class="project__media" src="pics/lcp-forge.png" alt="The LCP Forge content-package builder interface in its HORUS terminal theme." loading="lazy" />
+          <div class="project__head">
+            <h3 class="project__title">lcp-forge</h3>
+            <div class="project__links">
+              <a href="https://github.com/Cthulhu5227/lcp-forge" aria-label="GitHub repo"><svg class="icon"><use href="#i-github" /></svg></a>
+              <a href="http://schreiberjett.ca/lcp-forge/" aria-label="Live site"><svg class="icon"><use href="#i-external" /></svg></a>
+            </div>
+          </div>
+          <p class="project__desc">
+            A browser-based content-package builder for the LANCER TTRPG. Build
+            custom weapons, mech systems, frames, and mods, then export a valid
+            <code>.lcp</code> file, zipped on the client's side with JSZip, to import
+            straight into the online tool Comp/Con. 
+          </p>
+          <ul class="project__tags">
+            <li>Vanilla JS</li>
+            <li>localStorage</li>
+            <li>JSZip</li>
+          </ul>
+        </li>
+
+        <li class="project">
+          <div class="project__head">
+            <h3 class="project__title">game-off-14</h3>
+            <div class="project__links">
+              <a href="https://github.com/Merrick-McLean/GameOff14" aria-label="GitHub repo"><svg class="icon"><use href="#i-github" /></svg></a>
+            </div>
+          </div>
+          <p class="project__desc">
+            A collaborative entry for GitHub's Game Off game jam, built in Godot
+            with GDScript and custom GDShaders. Worked as part of a small team,
+            splitting up gameplay, level generation, and rendering systems and
+            integrating them through a shared Git workflow of branches, pull
+            requests, and merges to keep everyone's work in sync.
+          </p>
+          <ul class="project__tags">
+            <li>Godot</li>
+            <li>GDScript</li>
+            <li>Collaboration</li>
+            <li>Git</li>
+          </ul>
+        </li>
+      </ul>
+    </section>
+
+    <section id="education" class="section">
+      <header class="section__header">
+        <span class="section__num">03</span>
+        <h2 class="section__title">education</h2>
+      </header>
+      <ol class="timeline">
+        <li class="timeline__item">
+          <div class="timeline__when">2021-2026</div>
+          <div class="timeline__body">
+            <h3>B.Sc. Computer Science <span class="timeline__at">@ University of Victoria</span></h3>
+            <p>
+              Specialization in Computer Graphics, with a minor in Business.
+              Coursework spanning real-time rendering, GPU programming, geometry
+              processing, and the math underneath them. This was paired with the business
+              side for the product and team around the tech.
+            </p>
+            <p>
+              Relevant coursework:
+              Computer Modeling, Introduction to AI, Computer Animation, 
+              Algorithms and Data Structures, Mining of Massive Datasets, Entrepreneurship
+
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section id="experience" class="section">
+      <header class="section__header">
+        <span class="section__num">04</span>
+        <h2 class="section__title">experience</h2>
+      </header>
+      <ol class="timeline">
+        <li class="timeline__item">
+          <div class="timeline__when">January 2025 - August 2025</div>
+          <div class="timeline__body">
+            <h3>IT Support Technician <span class="timeline__at">@ Blackman Support Services</span></h3>
+            <p>
+              Worked in the IT department, providing technical support and maintenance of
+              computer systems. Hands-on networking and hardware knowledge, with
+              server setup and troubleshooting skills.
+            </p>
+          </div>
+        </li>
+        <li class="timeline__item">
+          <div class="timeline__when">2026 - ?</div>
+          <div class="timeline__body">
+            <h3>Graphics Engineer <span class="timeline__at">@ Your Company Here</span></h3>
+            <p>
+              This slot's open. You could be next. 
+            </p>
+          </div>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section section--console" aria-label="Renderer">
+      <div class="console" role="img" aria-label="Rotating ASCII torus rendered in real time">
+        <div class="console__bar">
+          <span class="console__title">render.sh :: torus</span>
+          <span class="console__meta">◆ SHADED/Z-BUFFER</span>
+          <span class="console__controls" aria-hidden="true">
+            <span class="console__btn">&#9472;</span>
+            <span class="console__btn">&#9633;</span>
+            <span class="console__btn console__btn--close" data-tip="but its pretty :(">&#10005;</span>
+          </span>
+        </div>
+        <pre id="torus" class="console__screen" aria-hidden="true"
+             data-idle="renderer idle: reduced motion preference detected"></pre>
+      </div>
+    </section>
+
+    <section id="hobbies" class="section">
+      <header class="section__header">
+        <span class="section__num">05</span>
+        <h2 class="section__title">hobbies</h2>
+      </header>
+      <div class="about">
+        <div class="about__body">
+          <p>
+            Away from my computer I spend a lot of time <strong>3D
+            printing</strong>. It's a natural extension of the graphics work.
+            I model parts, dial in settings, and troubleshoot/maintain
+            the mechanical side of the printer itself.
+          </p>
+          <p>
+            I also dabble in <strong>game development</strong>, mostly small
+            projects and game jams, where a tight deadline forces you to focus
+            hard and actually ship something playable.
+          </p>
+          <p>
+            And when I want to step away from a screen entirely, I
+            <strong>cook</strong>. I like how you have to 
+            follow a process, read the feedback, and modify the recipe until the
+            result is what you were after.
+          </p>
+        </div>
+        <aside class="about__stack" aria-label="3D printing toolkit">
+          <h3 class="about__stack-title">workbench</h3>
+          <ul>
+            <li><span class="tag">model</span> Blender</li>
+            <li><span class="tag">mesh</span> Remeshy</li>
+            <li><span class="tag">print</span> FDM</li>
+          </ul>
+        </aside>
+      </div>
+    </section>
+
+    <section id="contact" class="section section--contact">
+      <header class="section__header">
+        <span class="section__num">06</span>
+        <h2 class="section__title">contact</h2>
+      </header>
+      <div class="contact">
+        <p class="contact__lede">
+          Currently open to graphics, rendering, GPU, engine, and tech roles.
+          Find me here:
+        </p>
+        <ul class="contact__socials">
+          <li><a href="https://github.com/Cthulhu5227">GitHub</a></li>
+          <li><a href="https://www.linkedin.com/in/jett-schreiber-b66212236/">LinkedIn</a></li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>© <span id="year">2026</span> Jett Schreiber</span>
+    <span class="footer__build">built with html, css, and a little js :)</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
