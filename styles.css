@@ -231,13 +231,6 @@ main {
 
 .accent {
   color: var(--accent);
-  font-family: var(--mono);
-  font-weight: 600;
-}
-
-.hero__title .accent {
-  font-family: inherit;
-  font-weight: inherit;
 }
 
 .hero__lede {
