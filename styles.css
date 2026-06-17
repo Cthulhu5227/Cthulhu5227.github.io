@@ -474,6 +474,27 @@ main {
   white-space: pre;
 }
 
+.console__credit {
+  margin: 0;
+  padding: 0.5rem 0.85rem;
+  font-family: var(--mono);
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  color: var(--text-dim);
+  border-top: 1px solid rgba(59, 120, 255, 0.18);
+  background: #06070a;
+}
+
+.console__credit a {
+  color: var(--cmd-blue);
+  text-decoration: none;
+  border-bottom: 1px dotted currentColor;
+}
+
+.console__credit a:hover {
+  text-shadow: 0 0 8px var(--cmd-blue);
+}
+
 /* projects */
 .projects {
   list-style: none;
